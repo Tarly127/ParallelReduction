@@ -32,11 +32,11 @@ namespace my_parallel
     {
         using value_t = typename std::iterator_traits<InputIt>::value_type;
 
-        const std::size_t N_THREADS = std::thread::hardware_concurrency() * 2; // assuming hyperthreading because fuck you
+        const std::size_t N_THREADS = std::thread::hardware_concurrency() * 2; // assuming hyperthreading
         const std::size_t COUNT = static_cast<std::size_t>( std::distance(begin, end) );
 
         std::thread workers[N_THREADS];
-        value_t partial_reduction[N_THREADS]; //kinda roto
+        value_t partial_reduction[N_THREADS];
 
         std::size_t curr_block_size = 0;
         InputIt end_aux;
@@ -93,11 +93,11 @@ namespace my_parallel
     {
         using value_t = typename std::iterator_traits<InputIt>::value_type;
 
-        const std::size_t N_THREADS = std::thread::hardware_concurrency() * 2; // assuming hyperthreading because fuck you
+        const std::size_t N_THREADS = std::thread::hardware_concurrency() * 2; // assuming hyperthreading
         const std::size_t COUNT = static_cast<std::size_t>( std::distance(begin, end) );
 
         std::thread workers[N_THREADS];
-        value_t partial_reduction[N_THREADS]; //kinda roto
+        value_t partial_reduction[N_THREADS];
 
         std::size_t curr_block_size = 0;
 
