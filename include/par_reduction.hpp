@@ -11,12 +11,6 @@
 #define __MY_PARALLEL__
 
 
-/**
- * trash buffer
- * 
- * std::invocable<Fn, typename std::iterator_traits<InputIt>::value_type, typename std::iterator_traits<InputIt>::pointer, Args...>
- * 
- */
 #pragma GCC system_header
 namespace my_parallel
 {
